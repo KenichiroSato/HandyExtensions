@@ -10,6 +10,16 @@
 		59150C241D4D9DA200181E42 /* HandyExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 59150C231D4D9DA200181E42 /* HandyExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59150C2B1D4D9DA300181E42 /* HandyExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59150C201D4D9DA200181E42 /* HandyExtensions.framework */; };
 		59150C301D4D9DA300181E42 /* HandyExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59150C2F1D4D9DA300181E42 /* HandyExtensionsTests.swift */; };
+		59B2F9BD1D4DA92200B4C9F1 /* NSCalender+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9B31D4DA92200B4C9F1 /* NSCalender+extension.swift */; };
+		59B2F9BE1D4DA92200B4C9F1 /* NSDate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9B41D4DA92200B4C9F1 /* NSDate+extension.swift */; };
+		59B2F9BF1D4DA92200B4C9F1 /* NSThread+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9B51D4DA92200B4C9F1 /* NSThread+extension.swift */; };
+		59B2F9C01D4DA92200B4C9F1 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9B61D4DA92200B4C9F1 /* String+extension.swift */; };
+		59B2F9C11D4DA92200B4C9F1 /* UIDevice+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9B71D4DA92200B4C9F1 /* UIDevice+extension.swift */; };
+		59B2F9C21D4DA92200B4C9F1 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9B81D4DA92200B4C9F1 /* UIImage+extension.swift */; };
+		59B2F9C31D4DA92200B4C9F1 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9B91D4DA92200B4C9F1 /* UIImageView+extension.swift */; };
+		59B2F9C41D4DA92200B4C9F1 /* UIScrollView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9BA1D4DA92200B4C9F1 /* UIScrollView+extension.swift */; };
+		59B2F9C51D4DA92200B4C9F1 /* UIStoryBoard+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9BB1D4DA92200B4C9F1 /* UIStoryBoard+extension.swift */; };
+		59B2F9C61D4DA92200B4C9F1 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F9BC1D4DA92200B4C9F1 /* UIViewController+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +39,16 @@
 		59150C2A1D4D9DA300181E42 /* HandyExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandyExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59150C2F1D4D9DA300181E42 /* HandyExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyExtensionsTests.swift; sourceTree = "<group>"; };
 		59150C311D4D9DA300181E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59B2F9B31D4DA92200B4C9F1 /* NSCalender+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalender+extension.swift"; sourceTree = "<group>"; };
+		59B2F9B41D4DA92200B4C9F1 /* NSDate+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+extension.swift"; sourceTree = "<group>"; };
+		59B2F9B51D4DA92200B4C9F1 /* NSThread+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSThread+extension.swift"; sourceTree = "<group>"; };
+		59B2F9B61D4DA92200B4C9F1 /* String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		59B2F9B71D4DA92200B4C9F1 /* UIDevice+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+extension.swift"; sourceTree = "<group>"; };
+		59B2F9B81D4DA92200B4C9F1 /* UIImage+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		59B2F9B91D4DA92200B4C9F1 /* UIImageView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		59B2F9BA1D4DA92200B4C9F1 /* UIScrollView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+extension.swift"; sourceTree = "<group>"; };
+		59B2F9BB1D4DA92200B4C9F1 /* UIStoryBoard+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard+extension.swift"; sourceTree = "<group>"; };
+		59B2F9BC1D4DA92200B4C9F1 /* UIViewController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +91,16 @@
 		59150C221D4D9DA200181E42 /* HandyExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				59B2F9B31D4DA92200B4C9F1 /* NSCalender+extension.swift */,
+				59B2F9B41D4DA92200B4C9F1 /* NSDate+extension.swift */,
+				59B2F9B51D4DA92200B4C9F1 /* NSThread+extension.swift */,
+				59B2F9B61D4DA92200B4C9F1 /* String+extension.swift */,
+				59B2F9B71D4DA92200B4C9F1 /* UIDevice+extension.swift */,
+				59B2F9B81D4DA92200B4C9F1 /* UIImage+extension.swift */,
+				59B2F9B91D4DA92200B4C9F1 /* UIImageView+extension.swift */,
+				59B2F9BA1D4DA92200B4C9F1 /* UIScrollView+extension.swift */,
+				59B2F9BB1D4DA92200B4C9F1 /* UIStoryBoard+extension.swift */,
+				59B2F9BC1D4DA92200B4C9F1 /* UIViewController+extension.swift */,
 				59150C231D4D9DA200181E42 /* HandyExtensions.h */,
 				59150C251D4D9DA300181E42 /* Info.plist */,
 			);
@@ -195,6 +225,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B2F9C01D4DA92200B4C9F1 /* String+extension.swift in Sources */,
+				59B2F9BE1D4DA92200B4C9F1 /* NSDate+extension.swift in Sources */,
+				59B2F9C61D4DA92200B4C9F1 /* UIViewController+extension.swift in Sources */,
+				59B2F9BF1D4DA92200B4C9F1 /* NSThread+extension.swift in Sources */,
+				59B2F9C21D4DA92200B4C9F1 /* UIImage+extension.swift in Sources */,
+				59B2F9C51D4DA92200B4C9F1 /* UIStoryBoard+extension.swift in Sources */,
+				59B2F9BD1D4DA92200B4C9F1 /* NSCalender+extension.swift in Sources */,
+				59B2F9C31D4DA92200B4C9F1 /* UIImageView+extension.swift in Sources */,
+				59B2F9C11D4DA92200B4C9F1 /* UIDevice+extension.swift in Sources */,
+				59B2F9C41D4DA92200B4C9F1 /* UIScrollView+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +351,11 @@
 		59150C351D4D9DA300181E42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -319,15 +364,22 @@
 				INFOPLIST_FILE = HandyExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.capken.handyextensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		59150C361D4D9DA300181E42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -381,6 +433,7 @@
 				59150C361D4D9DA300181E42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59150C371D4D9DA300181E42 /* Build configuration list for PBXNativeTarget "HandyExtensionsTests" */ = {
 			isa = XCConfigurationList;
@@ -389,6 +442,7 @@
 				59150C391D4D9DA300181E42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
