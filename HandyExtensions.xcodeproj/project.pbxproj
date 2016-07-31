@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		59B2F9C71D4DAD6300B4C9F1 /* Build framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 59B2F9C81D4DAD6400B4C9F1 /* Build configuration list for PBXAggregateTarget "Build framework" */;
+			buildPhases = (
+				59B2F9CB1D4DADEF00B4C9F1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Build framework";
+			productName = "Build framework";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		59150C241D4D9DA200181E42 /* HandyExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 59150C231D4D9DA200181E42 /* HandyExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59150C2B1D4D9DA300181E42 /* HandyExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59150C201D4D9DA200181E42 /* HandyExtensions.framework */; };
@@ -183,6 +197,9 @@
 					59150C291D4D9DA300181E42 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					59B2F9C71D4DAD6300B4C9F1 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 59150C1A1D4D9DA200181E42 /* Build configuration list for PBXProject "HandyExtensions" */;
@@ -199,6 +216,7 @@
 			targets = (
 				59150C1F1D4D9DA200181E42 /* HandyExtensions */,
 				59150C291D4D9DA300181E42 /* HandyExtensionsTests */,
+				59B2F9C71D4DAD6300B4C9F1 /* Build framework */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +237,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59B2F9CB1D4DADEF00B4C9F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"HandyExtensions\"\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\ncp -r \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework.  The device mappings already exist from step 6.\ncp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		59150C1B1D4D9DA200181E42 /* Sources */ = {
@@ -414,6 +448,20 @@
 			};
 			name = Release;
 		};
+		59B2F9C91D4DAD6400B4C9F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		59B2F9CA1D4DAD6400B4C9F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +491,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		59B2F9C81D4DAD6400B4C9F1 /* Build configuration list for PBXAggregateTarget "Build framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B2F9C91D4DAD6400B4C9F1 /* Debug */,
+				59B2F9CA1D4DAD6400B4C9F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
